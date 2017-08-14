@@ -1,0 +1,27 @@
+﻿@model List<AdamS.OnlineStore.DomainModel.Customer>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Customers</h2>
+
+<table class="table table-striped">
+    <tr class="h4">
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th></th>
+
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.CustomerId</td>
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@Html.ActionLink("Delete","Delete", new {id=customer.CustomerId })</td>
+
+        </tr>
+    }
+</table>
