@@ -23,7 +23,7 @@ namespace AdamS.OnlineStore.DataDependenciesWithDBTst
             CustomerRepository cr = new CustomerRepository();
             _customers =cr.Get();
 
-            Assert.AreEqual(3, _customers.Count());
+            Assert.AreEqual(5, _customers.Count());
             string brk = "";
         }
 
